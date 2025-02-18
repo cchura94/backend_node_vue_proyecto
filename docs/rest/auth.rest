@@ -1,0 +1,10 @@
+POST http://127.0.0.1:3000/api/v1/auth/login
+
+### Registro
+POST http://127.0.0.1:3000/api/v1/auth/register
+
+### Perfil
+GET http://127.0.0.1:3000/api/v1/auth/profile
+
+### Salir
+POST http://127.0.0.1:3000/api/v1/auth/logout
