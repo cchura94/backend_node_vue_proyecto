@@ -1,2 +1,17 @@
 GET http://127.0.0.1:3000/api/v1/usuario
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yMVQwMjoyMDozMy4yNzlaIiwiaWF0IjoxNzQwMTA0NDMzLCJleHAiOjE3NDAxMDgwMzN9.69Buo6ck5BltX4ldiJlP95v_6qD3sVRaOVTvc_CYXiY
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yNlQwMjoyNDowOC42MTNaIiwiaWF0IjoxNzQwNTM2NjQ4LCJleHAiOjE3NDA1NDAyNDh9.k9BR6a7i8OJh1BkvVMoCOQA4n-1J9Lc0IOlKT9VywhU
+
+### nuevo usuario
+POST http://127.0.0.1:3000/api/v1/usuario
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yNlQwMjoyNDowOC42MTNaIiwiaWF0IjoxNzQwNTM2NjQ4LCJleHAiOjE3NDA1NDAyNDh9.k9BR6a7i8OJh1BkvVMoCOQA4n-1J9Lc0IOlKT9VywhU
+Content-Type: application/json
+
+{
+    "name": "pedro",
+    "email": "pedro@mail.com",
+    "password": "pedro54321"
+}
+
+### mostrar
+GET http://127.0.0.1:3000/api/v1/usuario/5
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yNlQwMjoyNDowOC42MTNaIiwiaWF0IjoxNzQwNTM2NjQ4LCJleHAiOjE3NDA1NDAyNDh9.k9BR6a7i8OJh1BkvVMoCOQA4n-1J9Lc0IOlKT9VywhU
