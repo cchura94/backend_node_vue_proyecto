@@ -1,7 +1,11 @@
 import express from "express";
 import rutas from './routes'
+import cors from "cors"
 
 const app = express();
+
+// habilitando cors
+app.use(cors())
 
 // aceptar peticiones en formato JSON (req.body)
 app.use(express.json());
