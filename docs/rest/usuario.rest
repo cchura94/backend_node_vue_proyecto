@@ -1,17 +1,32 @@
 GET http://127.0.0.1:3000/api/v1/usuario
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yNlQwMjoyNDowOC42MTNaIiwiaWF0IjoxNzQwNTM2NjQ4LCJleHAiOjE3NDA1NDAyNDh9.k9BR6a7i8OJh1BkvVMoCOQA4n-1J9Lc0IOlKT9VywhU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yOFQwMTo0MzoyMi40MDVaIiwiaWF0IjoxNzQwNzA3MDAyLCJleHAiOjE3NDA3MTA2MDJ9.4FwWEltFVOlcAKK65mPpZm6o8UpNEhVYr7YZvEcr6GE
 
 ### nuevo usuario
 POST http://127.0.0.1:3000/api/v1/usuario
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yNlQwMjoyNDowOC42MTNaIiwiaWF0IjoxNzQwNTM2NjQ4LCJleHAiOjE3NDA1NDAyNDh9.k9BR6a7i8OJh1BkvVMoCOQA4n-1J9Lc0IOlKT9VywhU
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yOFQwMTo0MzoyMi40MDVaIiwiaWF0IjoxNzQwNzA3MDAyLCJleHAiOjE3NDA3MTA2MDJ9.4FwWEltFVOlcAKK65mPpZm6o8UpNEhVYr7YZvEcr6GE
 Content-Type: application/json
 
 {
-    "name": "pedro",
-    "email": "pedro@mail.com",
-    "password": "pedro54321"
+    "name": "MARIA",
+    "email": "maria@mail.com",
+    "password": "maria54321"
 }
 
 ### mostrar
-GET http://127.0.0.1:3000/api/v1/usuario/5
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yNlQwMjoyNDowOC42MTNaIiwiaWF0IjoxNzQwNTM2NjQ4LCJleHAiOjE3NDA1NDAyNDh9.k9BR6a7i8OJh1BkvVMoCOQA4n-1J9Lc0IOlKT9VywhU
+GET http://127.0.0.1:3000/api/v1/usuario/9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yOFQwMTo0MzoyMi40MDVaIiwiaWF0IjoxNzQwNzA3MDAyLCJleHAiOjE3NDA3MTA2MDJ9.4FwWEltFVOlcAKK65mPpZm6o8UpNEhVYr7YZvEcr6GE
+
+### modificar
+PUT http://127.0.0.1:3000/api/v1/usuario/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yOFQwMTo0MzoyMi40MDVaIiwiaWF0IjoxNzQwNzA3MDAyLCJleHAiOjE3NDA3MTA2MDJ9.4FwWEltFVOlcAKK65mPpZm6o8UpNEhVYr7YZvEcr6GE
+
+{
+    "name": "admin",
+    "email": "admin@mail.com",
+    "password": "admin54321"
+}
+
+### eliminar
+DELETE http://127.0.0.1:3000/api/v1/usuario/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbjJAbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wMi0yOFQwMTo0MzoyMi40MDVaIiwiaWF0IjoxNzQwNzA3MDAyLCJleHAiOjE3NDA3MTA2MDJ9.4FwWEltFVOlcAKK65mPpZm6o8UpNEhVYr7YZvEcr6GE

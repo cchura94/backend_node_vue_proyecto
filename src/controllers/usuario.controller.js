@@ -49,10 +49,53 @@ export default {
             return res.status(500).json({error: 'Error al obtener el usuario'});
         }
     },
-    funModificar(req, res){
+    async funModificar(req, res){
+        // const id = req.params.id;
+        const { id } = req.params;
+        const { name, email, password } = req.body;
+        
+        console.log("*****: ", req.body);
+        
+        try {
+            const user = await models.User.findByPk(id);
 
+            if(!user){
+                return res.status(404).json({error: 'Usuario No encontrado'});
+            }
+
+            // modificar
+            if(name){
+                user.name = name;
+            } 
+            if(email) user.email = email;
+            if(password){
+                user.password = await bcrypt.hash(password, 12);
+            };
+
+            // guardar
+            await user.save();
+
+            return res.status(200).json({mensaje: "Usuario actualizado", usuario: {id: user.id, name: user.name, email: user.email}});
+            
+        } catch (error) {
+            return res.status(500).json({error: "Error al modificar el usuario"});
+        }
     },
-    funEliminar(req, res){
+    async funEliminar(req, res){
+        const { id } = req.params;
+        try {
+            const user = await models.User.findByPk(id);
+            if(!user){
+                return res.status(404).json({error: 'Usuario No encontrado'});
+            }
 
+            // await user.destroy();
+            return res.status(200).json({mensaje: "Usuario eliminado"});
+
+
+        } catch (error) {
+            return res.status(500).json({error: "Error al eliminar el usuario"});
+
+        }
     }
 }
