@@ -7,6 +7,9 @@ const app = express();
 // habilitando cors
 app.use(cors())
 
+// vizualizar archivos estaticos
+app.use(express.static('public'))
+
 // aceptar peticiones en formato JSON (req.body)
 app.use(express.json());
 
