@@ -1,6 +1,6 @@
 ### Listar Productos
-GET http://127.0.0.1:3000/api/v1/producto?page=1&limit=10&q=
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTE0VDAxOjQ1OjU1LjEzNVoiLCJpYXQiOjE3NDE5MTY3NTUsImV4cCI6MTc0MTkyMDM1NX0.yL96AKVGAQjnNvTDjBz9_VPYtsVD0JcbhzDvliKoWJw
+GET http://127.0.0.1:3000/api/v1/producto?page=2&limit=3&q=
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTE4VDAyOjAxOjIxLjYyN1oiLCJpYXQiOjE3NDIyNjMyODEsImV4cCI6MTc0MjI2Njg4MX0.xnH_aXEbMeUSuhqkc-akrBuT_9vOLuvj_0W10YTPMyE
 
 ### Guardar producto
 POST http://127.0.0.1:3000/api/v1/producto
