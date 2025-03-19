@@ -46,7 +46,7 @@ Router.delete('/categoria/:id', authMiddleware, categoriaController.funEliminar)
 // Categoria
 Router.get('/producto', authMiddleware, productoController.listar);
 Router.post('/producto', authMiddleware, productoController.guardar);
-Router.put('/producto', authMiddleware, productoController.modificar);
+Router.put('/producto/:id', authMiddleware, productoController.modificar);
 
 // Subida de imagen
 Router.post("/producto/:id/actualizar-imagen", authMiddleware, upload.single("imagen"), productoController.actualizarImagen);
