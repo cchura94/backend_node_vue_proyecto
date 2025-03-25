@@ -1,10 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "database_node_vue_development",
+    "password": "root",
+    "database": "mi_bd_node",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "port": "3309"
   },
   "test": {
     "username": "root",

@@ -1,6 +1,12 @@
 import express from "express";
-import rutas from './routes'
+// import rutas from './routes'
 import cors from "cors"
+
+// importandos archivos routes
+import authRoutes from "./routes/auth.routes"
+import categoriaRoutes from "./routes/categoria.routes"
+import usuarioRoutes from "./routes/usuario.routes"
+import productoRoutes from "./routes/producto.routes"
 
 const app = express();
 
@@ -15,7 +21,10 @@ app.use(express.json());
 
 
 // rutas
-app.use("/api/v1", rutas);
+app.use("/api/v1/auth", authRoutes);
+app.use("/api/v1/categoria", categoriaRoutes)
+app.use("/api/v1/usuario", usuarioRoutes)
+app.use("/api/v1/producto", productoRoutes)
 
 
 app.listen(3000, function(){
