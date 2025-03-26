@@ -23,8 +23,8 @@ export default {
                 time: new Date()
             }
 
-            const token = jwt.sign(payload, "JWT_SECRET", {
-                expiresIn: 60*60,
+            const token = jwt.sign(payload, process.env.JWT_SECRET || "JWT_SECRET", {
+                expiresIn: 60 * process.env.JWT_TIEMPO_EXPIRACION_MINUTOS || 60,
             })
 
             return res.status(200).json({
@@ -52,7 +52,7 @@ export default {
 
         // console.log("DATOS ENTRANTES: ", datos_usuario)
         // encriptar la contraseña
-        datos_usuario.password = await bcrypt.hash(datos_usuario.password, 12)
+        datos_usuario.password = await bcrypt.hash(datos_usuario.password, process.env.BCRYPT_SALT || 12)
         // console.log("DATOS CIFRADOS: ", datos_usuario);
 
         const user = await models.User.create(datos_usuario);
@@ -63,7 +63,7 @@ export default {
         return res.status(422).josn({error: true, mensaje: "Error al registrar el usuario"});
     },
     funPerfil(req, res){
-        res.json({mensaje: "Obteniendo el Perfil..."})
+        return res.status(200).json(req.user);
     },
     funLogout(req, res){
         res.json({mensaje: "Saliendo..."})

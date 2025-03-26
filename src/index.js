@@ -1,6 +1,7 @@
 import express from "express";
 // import rutas from './routes'
 import cors from "cors"
+require('dotenv').config()
 
 // importandos archivos routes
 import authRoutes from "./routes/auth.routes"
@@ -9,6 +10,8 @@ import usuarioRoutes from "./routes/usuario.routes"
 import productoRoutes from "./routes/producto.routes"
 
 const app = express();
+
+const PORT = process.env.PORT || 3000
 
 // habilitando cors
 app.use(cors())
@@ -27,6 +30,6 @@ app.use("/api/v1/usuario", usuarioRoutes)
 app.use("/api/v1/producto", productoRoutes)
 
 
-app.listen(3000, function(){
-    console.log("Servidor iniciadoo en http://127.0.0.1:3000");
+app.listen(PORT, function(){
+    console.log(`Servidor iniciadoo en http://127.0.0.1:${PORT}`);
 })

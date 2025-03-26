@@ -1,5 +1,6 @@
 import { Op } from "sequelize";
 import models from "./../database/models"
+import { validationResult } from "express-validator";
 
 export default {
 
@@ -32,6 +33,12 @@ export default {
 
     guardar: async (req, res) => {
         try {
+
+            const errors = validationResult(req);
+                if(!errors.isEmpty()){
+                  return res.status(400).json({errors: errors.array()})
+                }
+
             const datos = req.body;
             const producto = await models.Producto.create(datos);
             if(producto.id) {

@@ -1,3 +1,4 @@
+import { validationResult } from "express-validator";
 import models from "./../database/models";
 
 export default {
@@ -10,6 +11,12 @@ export default {
 
   async funGuardar(req, res) {
     const datos = req.body;
+
+    const errors = validationResult(req);
+    if(!errors.isEmpty()){
+      return res.status(400).json({errors: errors.array()})
+    }
+
     try {
       const categoria = await models.Categoria.create(datos);
 
@@ -17,8 +24,8 @@ export default {
         .status(201)
         .json({ mensaje: "Categoria Registrada", categoria });
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: "Error al registrar la categoria" });
+      // console.log(error);
+      return res.status(500).json({ error: "Error al registrar la categoria", res: error });
     }
   },
   async funMostrar(req, res) {

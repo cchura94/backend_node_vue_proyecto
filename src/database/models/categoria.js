@@ -17,7 +17,12 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Categoria.init({
-    nombre: DataTypes.STRING,
+    nombre: {
+      type: DataTypes.STRING,
+      validate: {
+        len: [3, 50]
+      }
+    },
     detalle: DataTypes.TEXT,
     estado: DataTypes.BOOLEAN
   }, {

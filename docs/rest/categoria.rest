@@ -4,11 +4,11 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiO
 ### Guardar Categoria
 
 POST http://127.0.0.1:3000/api/v1/categoria
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTA3VDAyOjI4OjQ4LjEwN1oiLCJpYXQiOjE3NDEzMTQ1MjgsImV4cCI6MTc0MTMxODEyOH0.c8HKEu5e4YRfMqRhgcw2cHnTLnICXo12WIvnZvQ3BSo
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTI2VDAxOjIxOjE1LjA0NVoiLCJpYXQiOjE3NDI5NTIwNzUsImV4cCI6MTc0Mjk1NTY3NX0.lNBFaBJuIzNEW5dJ1wmw8EyPUkBLXB6ogKqfuYNJHF4
 Content-Type: application/json
 
 {
-    "nombre": "JUGUETES",
+    "nombre": "a",
     "detalle": "juguetes para niños"
 }
 ### mostrar categoria

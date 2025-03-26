@@ -18,6 +18,7 @@ Content-Type: application/json
 
 ### Perfil
 GET http://127.0.0.1:3000/api/v1/auth/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTI2VDAyOjEzOjM1Ljc0MFoiLCJpYXQiOjE3NDI5NTUyMTUsImV4cCI6MTc0Mjk1ODgxNX0.3_-SPRc0GetLkr44_PdsZOr3GuyPbAqa6bt3qXIFlfs
 
 ### Salir
 POST http://127.0.0.1:3000/api/v1/auth/logout

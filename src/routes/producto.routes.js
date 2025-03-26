@@ -5,6 +5,8 @@ const Router = express.Router();
 import productoController from "./../controllers/producto.controller"
 import authMiddleware from "./../middlewares/auth.middleware"
 
+import productoValidator from "./../helpers/producto.validation"
+
 // configuracion multer (subida de archivos)
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -20,7 +22,7 @@ const storage = multer.diskStorage({
 
 // producto
 Router.get('/', authMiddleware, productoController.listar);
-Router.post('/', authMiddleware, productoController.guardar);
+Router.post('/', authMiddleware, productoValidator, productoController.guardar);
 Router.put('/:id', authMiddleware, productoController.modificar);
 
 // Subida de imagen

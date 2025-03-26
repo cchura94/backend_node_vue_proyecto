@@ -8,11 +8,11 @@ const authMiddleware = (req, res, next) => {
         // [Bearer, TOKEASKJFDSDKJFKSDFNSDF]
 
     }
-    console.log(token);
+    // console.log(token);
     if(!token){
         return res.status(401).json({message: "No se proporcionó el token de seguridad"});
     }
-    jwt.verify(token, "JWT_SECRET", (error, decode) => {
+    jwt.verify(token, process.env.JWT_SECRET || "JWT_SECRET", (error, decode) => {
         if(error){
             return res.status(401).json({
                 auth: false,
@@ -20,7 +20,9 @@ const authMiddleware = (req, res, next) => {
             })
         }
         const decoded = jwtDecode(token);
-        console.log(decoded)
+        req.user = decoded;
+        // console.log("decoded: ", decoded)
+        // console.log("decode: ", decode)
         // registrar la hora de ingreso al sistema en la BD
         next()
     });   

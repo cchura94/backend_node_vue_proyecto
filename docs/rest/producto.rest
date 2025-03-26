@@ -1,17 +1,16 @@
 ### Listar Productos
-GET http://127.0.0.1:3000/api/v1/producto?page=2&limit=3&q=
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTE4VDAyOjAxOjIxLjYyN1oiLCJpYXQiOjE3NDIyNjMyODEsImV4cCI6MTc0MjI2Njg4MX0.xnH_aXEbMeUSuhqkc-akrBuT_9vOLuvj_0W10YTPMyE
+GET http://127.0.0.1:3000/api/v1/producto?page=1&limit=3&q=
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTI2VDAxOjIxOjE1LjA0NVoiLCJpYXQiOjE3NDI5NTIwNzUsImV4cCI6MTc0Mjk1NTY3NX0.lNBFaBJuIzNEW5dJ1wmw8EyPUkBLXB6ogKqfuYNJHF4
 
 ### Guardar producto
 POST http://127.0.0.1:3000/api/v1/producto
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTE0VDAxOjQ1OjU1LjEzNVoiLCJpYXQiOjE3NDE5MTY3NTUsImV4cCI6MTc0MTkyMDM1NX0.yL96AKVGAQjnNvTDjBz9_VPYtsVD0JcbhzDvliKoWJw
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhZG1pbkBtYWlsLmNvbSIsInRpbWUiOiIyMDI1LTAzLTI2VDAxOjIxOjE1LjA0NVoiLCJpYXQiOjE3NDI5NTIwNzUsImV4cCI6MTc0Mjk1NTY3NX0.lNBFaBJuIzNEW5dJ1wmw8EyPUkBLXB6ogKqfuYNJHF4
 Content-Type: application/json
 
 {
-    "nombre": "PARLANTES",
-    "precio": 956.98,
-    "stock": 12,
-    "descripcion": "Parlantes de Prueba",
+    "nombre": "TECLADO MECANICO 2",
+    "precio": 756.98,
+    "stock": 20,
     "categoriaId": 2
 }
 
