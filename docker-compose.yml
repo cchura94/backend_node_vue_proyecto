@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./
+    ports:
+      - "3000:3000"
+    environment:
+      - BCRYPT_SALT=12
+    networks:
+      - app-network
+    depends_on:
+      - database
+    
+
+  frontend:
+    container_name: frontend
+    build:
+      context: ./../frontend_vue_node_proyecto
+    ports:
+      - "85:80"
+    networks:
+      - app-network
+    depends_on:
+      - backend
+    
+#
+  database:
+    container_name: database
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mi_bd_node
+    volumes:
+      - db_data:/var/lib/mysql
+    # ports:
+    #   - "3306:3306"
+    networks:
+      - app-network
+
+#
+#  nginx:
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  db_data:

@@ -52,9 +52,12 @@ export default {
 
         // console.log("DATOS ENTRANTES: ", datos_usuario)
         // encriptar la contraseña
-        datos_usuario.password = await bcrypt.hash(datos_usuario.password, process.env.BCRYPT_SALT || 12)
+        console.log(datos_usuario)
+        let salt_round = process.env.BCRYPT_SALT || 12;
+        datos_usuario.password = await bcrypt.hash(datos_usuario.password, 12);
         // console.log("DATOS CIFRADOS: ", datos_usuario);
 
+        console.log(datos_usuario)
         const user = await models.User.create(datos_usuario);
         
         if(user.id)

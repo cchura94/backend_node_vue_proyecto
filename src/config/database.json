@@ -3,9 +3,9 @@
     "username": "root",
     "password": "root",
     "database": "mi_bd_node",
-    "host": "127.0.0.1",
+    "host": "database",
     "dialect": "mysql",
-    "port": "3309"
+    "port": "3306"
   },
   "test": {
     "username": "root",
