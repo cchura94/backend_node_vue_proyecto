@@ -19,7 +19,7 @@ services:
     build:
       context: ./../frontend_vue_node_proyecto
     ports:
-      - "85:80"
+      - "80:80"
     networks:
       - app-network
     depends_on:
